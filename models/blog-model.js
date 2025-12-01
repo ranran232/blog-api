@@ -26,7 +26,7 @@ static async getLatestPerCategory(website_id, limit = 6, skipId = null) {
     "psychology",
     "travel",
     "realities",
-    "our process",
+    "our-process",
   ];
 
   const snapshot = await db.collection(COLLECTION_NAME)
