@@ -25,10 +25,9 @@ class Article {
 
     const snapshot = await query.get();
 
-    const items = snapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
+    const items = snapshot.docs
+    .map(doc => ({ id: doc.id, ...doc.data() }))
+    .filter(item => item.slug !== "index"); 
 
     // cursor for next page
     const nextPageToken =
